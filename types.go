@@ -38,5 +38,5 @@ func (r *Response) Unmarshal(bs []byte) error {
 }
 
 func (r Result) Marshal() ([]byte, error) {
-	return bytes.NewBufferString(fmt.Sprintf("a:%d,b:%d,s:%d,m:%d", r.A, r.B, r.S, r.M)).Bytes(), nil
+	return bytes.NewBufferString(fmt.Sprintf("{a:%d,b:%d,s:%d,m:%d}", r.A, r.B, r.S, r.M)).Bytes(), nil
 }
